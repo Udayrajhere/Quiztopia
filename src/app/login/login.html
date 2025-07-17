@@ -1,0 +1,75 @@
+<div class="wrapper">
+  <span class="bg-animate"></span>
+  <span class="bg-animate2"></span>
+  <div *ngIf="activeForm ==='login'" class="form-box login">
+
+    <form [formGroup]="quizLogin">
+      <h2>Login</h2>
+      <div class="input-box">
+        <input type="email" name="email" formControlName="email" id="email" required />
+        <label>Email</label>
+        <i class="fa-solid fa-envelope"></i>
+        @if(isEmailValid()) {
+        <div class="mandatory"> Email is required!</div>
+        }
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" formControlName="password" id="password" required />
+        <label>Password</label>
+        <i class="fa-solid fa-lock"></i>
+        @if(isPasswordValid()) {
+        <div class="mandatory"> Password is required!</div>
+        }
+      </div>
+      <div class="loginBtn" (click)="loginForm()" >Login</div>
+      <div class="logreg-link">
+        <p (click)="toggleForm('signup')">Don't have an account?
+          <a>Sign Up</a>
+        </p>
+      </div>
+    </form>
+  </div>
+  <div class="info-text login">
+    <h2>Welcome to Quiztopia Quiz</h2> <br>
+    <p>Please login/signup to enter the quiz.</p>
+  </div>
+
+
+  <div *ngIf="activeForm ==='signup'" class="form-box login">
+    <h2>Sign Up</h2>
+    <form [formGroup]="quizSignup">
+      <div class="input-box">
+        <input type="name" name="name" formControlName="name" id="name" required />
+        <label>Username</label>
+        <i class="fa-solid fa-user"></i>
+        @if(isNameValids()) {
+        <div class="mandatory">Bhai sun, Name is required!</div>
+        }
+      </div>
+
+
+      <div class="input-box">
+        <input type="email" name="email" formControlName="email" id="email" required />
+        <label>Email</label>
+        <i class="fa-solid fa-envelope"></i>
+        @if(isEmailValids()) {
+        <div class="mandatory">Bhai sun, Email is required!</div>
+        }
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" formControlName="password" id="password" required />
+        <label>Password</label>
+        <i class="fa-solid fa-lock"></i>
+        @if(isPasswordValids()) {
+        <div class="mandatory">Bhai sun, Password is required!</div>
+        }
+      </div>
+      <button type="submit" class="loginBtn" (click)="signupform()">Sign Up</button>
+      <div class="logreg-link">
+        <p (click)="toggleForm('login')">Already have an account?
+          <a>LOGIN</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
