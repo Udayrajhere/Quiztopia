@@ -1,0 +1,124 @@
+/* :host {
+  display: flex;
+  padding: 400px;
+  background-color: white; 
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: wheat;
+} */
+
+.quiz-container {
+  /* width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+   */
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+
+}
+
+.quiz-header {
+  text-align: center;
+  background-color: #e3f2fd;
+  box-shadow: 0 0px 1px black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.quiz-header .header {
+  font-family: cursive;
+  font-size: 32px;
+  color: #0d47a1;
+  margin: 0;
+}
+
+.quiz-header span {
+  font-style: italic;
+  font-size: 16px;
+  color: #555;
+}
+
+.question-block {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 1rem; 
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgb(0, 0, 0);
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+
+.question-block:hover {
+  transform: scale(1.01);
+}
+
+.question-text {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+  box-shadow: 0 0 0.5px black;
+  /* border-radius: 2px; */
+}
+
+.option-label {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  color: #000000;
+  font-size: 16px;
+  box-shadow: 0 0 1px rgb(0, 0, 0);
+}
+
+.option-label input[type="radio"] {
+  margin-right: 10px;
+}
+
+.option-label:hover {
+  background-color: #686869;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .question-text {
+    font-size: 18px;
+  }
+
+  .option-label {
+    font-size: 14px;
+  }
+}
+
+.submit-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-btn:hover {
+  background-color: #43a047;
+}

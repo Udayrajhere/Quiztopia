@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #081b29;
+}
+
+.header{
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.startingpage{
+    color: white;
+}

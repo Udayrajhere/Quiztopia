@@ -1,26 +1,22 @@
-<nav class="navbar navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand text-bold" href="#">
-      <img src="https://img.icons8.com/color/96/000000/angularjs.png" width="50" alt="logo"> 
-      <span class="text-uppercase">ngular Quiz</span>
-    </a>
-  </div>
-</nav>
+<div class="container">
+  <h1 class="header">Welcome To Quiztopia App</h1>
 
-<div class="container bg-light py-5">
-<h1 class="display-5 fw-bold">Welcome To Quiztopia App</h1>
-<p class="col-md-8 fs-4">This quiz will Contains Total 10 questions. Each question holds 10points.</p>
-<h4>Rules:</h4>
-<ol>
-    <li>Correct question gives you 10points.</li>
-    <li>Incoorect question gives you -10points.</li>
-    <li>You will have 60sec to answer each question.</li>
-    <li>Refreshing the page will reset the Quiz. </li>
-</ol>
-<h1 style="font-family: cursive; text-align: center;">All the Best!!</h1>
-<div class="name col-md-4 my-3">
-    <label for="">Enter Your Name</label>
-    <input type="text" class="form-control">
-</div>
-<button class="btn btn-primary btn-lg" routerLink="/login">Start the Quiz!!</button>
+  <div class="startingpage">
+    <label for="Subject">Select Your Subject :- &nbsp;</label>
+    <select (change)="onSubjectChange($event)">
+      <option value="none">None Selected</option>
+      <option value="Science">Science</option>
+      <option value="Sst">SST</option>
+      <option value="Math">Math</option>
+    </select>
+
+    <label for="Level">Select Your Level :- &nbsp;</label>
+    <select (change)="onlevelChange($event)">
+      <option value="none">None Selected</option>
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+    <button (click)="onSubmit()">Submit</button>
+  </div>
 </div>

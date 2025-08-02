@@ -1,0 +1,27 @@
+<div class="quiz-container">
+  <div class="quiz-header">
+    <h4 class="header">Quiztopia Quiz!</h4>
+    <span>Welcome User</span>
+    <div class="timer">
+      Time Left: {{ minutes }}:{{ seconds < 10 ? '0' + seconds : seconds }}
+    </div>
+  </div>
+  <br>
+  @for (item of questions; track $index) {
+    <div class="question-block">
+      <p class="question-text">
+        {{ $index + 1 }}. {{ item.question }}
+      </p>
+
+      <div class="options">
+        @for (opt of item.option; track $index) {
+          <label class="option-label">
+            <input type="radio" name="{{ item.id }}" value="{{ opt }}" (change)="selectAnswer(item.id, opt)" />
+            {{ opt }}
+          </label>
+        }
+      </div>
+    </div>
+  }
+  <button (click)="submitQuiz()" class="submit-btn" [disabled]="timeUp">Submit</button>
+</div>
